@@ -99,7 +99,12 @@
 			"path": "github.com/golang/protobuf/protoc-gen-go/plugin",
 			"revision": "c65a0412e71e8b9b3bfd22925720d23c0f054237",
 			"revisionTime": "2018-01-22T22:16:10Z"
+		},
+		{
+			"checksumSHA1": "2wk7pDmxi7LoAHtIQTDEWt9F8/A=",
+			"path": "github.com/streadway/amqp",
+			"revision": "a314942b2fd9dde7a3f70ba3f1062848ce6eb392",
+			"revisionTime": "2018-12-05T11:43:30Z"
 		}
-	],
-	"rootPath": "/project/study/src"
+	]
 }
