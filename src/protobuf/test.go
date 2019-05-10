@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/golang/protobuf/proto"
 	"log"
-	"protobuf_test/pb"
+	"protobuf/pb"
 )
 
 func main() {
