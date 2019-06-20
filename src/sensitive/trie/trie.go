@@ -62,7 +62,7 @@ func (sn *SensitiveNode) GetChildNode(char int32) *SensitiveNode {
 	return sn.children[char]
 }
 
-// 子节点的数量
+// 是否存在子节点
 func (sn *SensitiveNode) HasChild() bool {
 	return len(sn.children) > 0
 }

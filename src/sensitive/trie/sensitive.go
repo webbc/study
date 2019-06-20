@@ -1,30 +1,22 @@
-package main
+package trie
 
-import (
-	"sensitive/trie"
-	"strings"
-	"fmt"
-)
+import "strings"
 
-var tree *trie.SensitiveTree
-
-func main() {
-	fmt.Println(sensitiveCheck("你TM是CN傻逼NM狗么？"))
-}
+var tree *SensitiveTree
 
 // 构建屏蔽字树
-func createSensitiveTree() {
+func CreateSensitiveTree() {
 	var words = []string{"CNM", "操", "尼玛", "SB", "傻逼", "菜鸡", "TM", "狗"}
-	tree = trie.NewSensitiveTree()
+	tree = NewSensitiveTree()
 	for _, word := range words {
 		tree.Insert(word)
 	}
 }
 
-func sensitiveCheck(word string) string {
+func SensitiveCheck(word string) string {
 
 	// 加载屏蔽字树
-	createSensitiveTree()
+	CreateSensitiveTree()
 
 	t := []rune(word)        // 转换为unicode数组
 	p1 := tree.GetRoot()     // p1指向树的根节点
