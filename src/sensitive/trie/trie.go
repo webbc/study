@@ -12,8 +12,8 @@ type SensitiveTree struct {
 
 // 屏蔽字树节点
 type SensitiveNode struct {
-	value    int32
-	children map[int32]*SensitiveNode // 子节点
+	value    rune
+	children map[rune]*SensitiveNode // 子节点
 }
 
 // 创建树
@@ -24,10 +24,10 @@ func NewSensitiveTree() *SensitiveTree {
 }
 
 // 创建节点
-func newSensitiveNode(value int32) *SensitiveNode {
+func newSensitiveNode(value rune) *SensitiveNode {
 	return &SensitiveNode{
 		value:    value,
-		children: make(map[int32]*SensitiveNode),
+		children: make(map[rune]*SensitiveNode),
 	}
 }
 
@@ -52,13 +52,13 @@ func (st *SensitiveTree) GetRoot() *SensitiveNode {
 }
 
 // 判断节点内容是否为指定内容
-func (sn *SensitiveNode) Contains(char int32) bool {
+func (sn *SensitiveNode) Contains(char rune) bool {
 	_, found := sn.children[char]
 	return found
 }
 
 // 获取指定的子节点
-func (sn *SensitiveNode) GetChildNode(char int32) *SensitiveNode {
+func (sn *SensitiveNode) GetChildNode(char rune) *SensitiveNode {
 	return sn.children[char]
 }
 
