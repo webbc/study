@@ -172,6 +172,8 @@ func main() {
 		fmt.Println(e)
 	}
 
+	tree.Echo()
+
 	newStr := SensitiveTransform("本土无码公司待办列宁测试GM")
 	fmt.Println(newStr)
 
